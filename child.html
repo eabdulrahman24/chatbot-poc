@@ -46,16 +46,16 @@
         embedded_svc.settings.enabledFeatures = ['LiveAgent'];
         embedded_svc.settings.entryFeature = 'LiveAgent';
         embedded_svc.init(
-          'http://localhost.internal.salesforce.com:6109',
-          'http://localhost.force.com:6109/test1',
+          'https://hrblockenterprise--poc2.my.salesforce.com',
+          'https://poc2-hrblockenterprise.cs124.force.com/',
           gslbBaseURL,
-          '00Dxx0000001gEW',
-          'omni_1', {
-            baseLiveAgentContentURL: 'path/to/baseLiveAgentContentURL',
-            deploymentId: '572xx0000000001',
-            buttonId: '573xx0000000001',
-            baseLiveAgentURL: 'path/to/baseLiveAgentURL',
-            eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04IRM0000004Dv12AE_16c4e028e49',
+          '00D3J0000008jgt',
+          'Support_Group', {
+            baseLiveAgentContentURL: 'https://c.la1-c1cs-ia4.salesforceliveagent.com/content',
+            deploymentId: '5723k000000bxPd',
+            buttonId: '5733J0000004CEN',
+            baseLiveAgentURL: 'https://d.la1-c1cs-ia4.salesforceliveagent.com/chat',
+            eswLiveAgentDevName: 'Support_Group',
             isOfflineSupportEnabled: true
           }
         );
@@ -92,13 +92,13 @@
 
       if (!window.embedded_svc) {
         var s = document.createElement('script');
-        s.setAttribute('src', '<yourcoreurl>/embeddedservice/5.0/esw.js');
+        s.setAttribute('src', 'https://hrblockenterprise--poc2.my.salesforce.com/embeddedservice/5.0/esw.min.js');
         s.onload = function() {
           initESW(null);
         };
         document.body.appendChild(s);
       } else {
-        initESW('<yourcoreurl>/to/esw.js');
+        initESW('https://hrblockenterprise--poc2.my.salesforce.com');
       }
 
     </script>
