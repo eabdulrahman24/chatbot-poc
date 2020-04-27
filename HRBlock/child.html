@@ -23,8 +23,11 @@
       // On page load set the correct size of the iframe to account for either CWAE/Contact Us or Session Continuity.
       function helpButtonLoaded() {
         var helpButton = document.querySelector('.helpButton');
+        
         const queryString = window.location.search;
         console.log(queryString);
+        
+        const urlParams = new URLSearchParams(queryString);
         
         const firstName = urlParams.get('firstName')
         console.log('FIRST NAME:' + firstName);
