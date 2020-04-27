@@ -24,12 +24,11 @@
       function helpButtonLoaded() {
         var helpButton = document.querySelector('.helpButton');
         
-        const queryString = parent.document.location.href;
+        var queryString = parent.document.location.href;
         console.log(queryString);
         
-        const urlParams = new URLSearchParams(queryString);
-        console.log("URL PARAMS " + urlParams);
-        const firstName = urlParams.get("firstName")
+        var url = new URL(queryString);
+        var firstName = url.searchParams.get("firstName");
         console.log(firstName);
         
         if (!helpButton) {
