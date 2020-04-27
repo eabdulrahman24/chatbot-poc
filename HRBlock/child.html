@@ -24,7 +24,7 @@
       function helpButtonLoaded() {
         var helpButton = document.querySelector('.helpButton');
         
-        const queryString = window.location.search;
+        const queryString = parent.document.location.href;
         console.log(queryString);
         
         const urlParams = new URLSearchParams(queryString);
