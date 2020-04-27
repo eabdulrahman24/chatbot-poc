@@ -23,13 +23,7 @@
       // On page load set the correct size of the iframe to account for either CWAE/Contact Us or Session Continuity.
       function helpButtonLoaded() {
         var helpButton = document.querySelector('.helpButton');
-        
-        var queryString = parent.document.location.href;
-        console.log(queryString);
-        
-        var url = new URL(queryString);
-        var firstName = url.searchParams.get("firstName");
-        console.log(firstName);
+
         
         if (!helpButton) {
           window.setTimeout(helpButtonLoaded, 500);
@@ -46,6 +40,13 @@
 
       var initESW = function(gslbBaseURL) {
 
+                
+        var queryString = parent.document.location.href;
+        console.log(queryString);
+        
+        var url = new URL(queryString);
+        var firstName = url.searchParams.get("firstName");
+        console.log(firstName);
         
         embedded_svc.settings.displayHelpButton = true; // Or false
         embedded_svc.settings.language = 'en-US'; // For example, enter 'en' or 'en-US'
