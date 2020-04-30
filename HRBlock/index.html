@@ -2,11 +2,23 @@
 <html>
   <style>
     
-  iframe{
-    width: 100%;
-    height:100%;
-    border: none;
-  }
+  .container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
   </style>
   <head>
     <title>Salesforce Chat - Iframes POC</title>
@@ -22,8 +34,9 @@
     };
   </script>
   <body>
-    <div style ="bottom: 0px; right: 0px; position: absolute;" >
-      <iframe id="chatFrame" src= "https://eabdulrahmanSFDC.github.io/chatbot-poc/HRBlock/child.html"></iframe>
+    <div class="container" >
+      <iframe class="responsive-iframe" src= "https://eabdulrahmanSFDC.github.io/chatbot-poc/HRBlock/child.html"></iframe>
     </div>
   </body>
   
+</html>
