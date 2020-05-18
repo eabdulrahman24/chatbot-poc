@@ -49,6 +49,7 @@
         console.log(firstName);
         var lastName = url.searchParams.get("lastName");
         var email = url.searchParams.get("email");
+        var productType = url.searchParams.get("productType");
         
                 
         
@@ -73,8 +74,10 @@
           "transcriptFields": ["Last_Name__c"]
         },{
           "label":"Email", 
-          "transcriptFields": ["Email__c"],
-          "value": email
+          "transcriptFields": ["Email__c"]
+        },{
+           "label":"Product Type", 
+          "transcriptFields": ["Product_Type__c"]
         }];
         
         embedded_svc.settings.enabledFeatures = ['LiveAgent'];
